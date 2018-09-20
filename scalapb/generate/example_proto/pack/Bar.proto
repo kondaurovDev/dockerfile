@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+package example.pack;
+
+message Bar {
+    required int32 baz = 1;
+}
