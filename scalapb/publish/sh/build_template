@@ -1,4 +1,4 @@
-sourceDirectory in Compile := new File("${src_path}")
+scalaSource in Compile := new File("${src_path}")
 name := "${project_name}"
 organization := "${org}"
 version := "${version}"
