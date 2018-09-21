@@ -1,4 +1,4 @@
-###### kondaurov/scalapb:generator
+#### kondaurov/scalapb:generator
 
 [![](https://images.microbadger.com/badges/image/kondaurov/scalapb:generator.svg)](https://microbadger.com/images/kondaurov/scalapb:generator "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/kondaurov/scalapb:generator.svg)](https://microbadger.com/images/kondaurov/scalapb:generator "Get your own version badge on microbadger.com")
@@ -27,6 +27,9 @@ There is a tool [ScalaPBC](https://scalapb.github.io/scalapbc.html), it's JAR th
 This image contains this JAR and all it needs to be running.
 
 #### kondaurov/scalapb:publisher
+
+[![](https://images.microbadger.com/badges/image/kondaurov/scalapb:publisher.svg)](https://microbadger.com/images/kondaurov/scalapb:generator "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/kondaurov/scalapb:publisher.svg)](https://microbadger.com/images/kondaurov/scalapb:generator "Get your own version badge on microbadger.com")
 
 This image will compile your generated classes and will publish them to maven repository.
 POM will contain grpc and scalaPB runtime dependencies.
