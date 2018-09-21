@@ -1,7 +1,8 @@
+base_image=kondaurov/scalapb:deps
 image_name=kondaurov/scalapb:generator
 
 build:
-	docker build -t ${image_name} -f Dockerfile .
+	docker pull base_image && docker build -t ${image_name} -f Dockerfile .
 
 ssh:
 	docker run --rm -it \

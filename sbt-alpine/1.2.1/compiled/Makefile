@@ -4,4 +4,4 @@ build:
 	docker build -t ${image_name} -f Dockerfile .
 
 ssh:
-	docker run -it --entrypoint=/bin/sh --rm ${image_name}
+	docker run --rm -it --entrypoint=/bin/sh --rm ${image_name}
