@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message Bar {
+    required string baz = 1;
+    optional int32 bam = 2;
+}
