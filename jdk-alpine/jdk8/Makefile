@@ -1,4 +1,4 @@
-image_name=kondaurov/jdk-alpine:jdk8slim
+image_name=kondaurov/jdk-alpine:8
 
 build:
-	docker build -t ${image_name} - < Dockerfile
+	docker pull openjdk:8-jdk-alpine && docker build -t ${image_name} - < Dockerfile

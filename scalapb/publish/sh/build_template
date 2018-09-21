@@ -1,0 +1,6 @@
+sourceDirectory in Compile := File(${src_path})
+name := "${project_name}"
+organization := "${org}"
+version := "${version}"
+credentials := Seq(Credentials("${realm}", "${host}", "${login}", "${password}"))
+publishTo := Some("Maven repo" at "${repository}")

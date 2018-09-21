@@ -1,4 +1,4 @@
-FROM kondaurov/jdk-alpine:jdk8slim
+FROM kondaurov/jdk-alpine:8
 
 MAINTAINER Kondaurov Alexander <kondaurov.dev@gmail.com>
 
