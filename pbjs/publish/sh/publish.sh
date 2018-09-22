@@ -22,6 +22,8 @@ cp -a ./ /dist
 
 cd /dist
 
+rm .[!.]*
+
 cat > package.json <<_EOF_
 {
  "name": "@$PACKAGE_SCOPE/$PACKAGE_NAME",
