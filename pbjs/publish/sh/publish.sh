@@ -16,6 +16,12 @@ echo "logging in..."
 
 /scripts/expect.sh "npm login --registry $REPO_URL --scope=@${PACKAGE_SCOPE} --always-auth" $REPO_LOGIN $REPO_PASSWORD >/dev/null 2>&1
 
+mkdir /dist
+
+cp -a ./ /dist
+
+cd /dist
+
 cat > package.json <<_EOF_
 {
  "name": "@$PACKAGE_SCOPE/$PACKAGE_NAME",
@@ -33,6 +39,4 @@ _EOF_
 
 echo "publishing..."
 
-npm publish || { echo "failed.. deleting package.json"; rm package.json; exit 1; }
-
-rm package.json
+npm publish || { echo "failed publishing.. "; exit 1; }
