@@ -5,6 +5,8 @@ MAINTAINER Kondaurov Alexander <kondaurov.dev@gmail.com>
 RUN set -x && \
 	apk add expect
 
+RUN npm install -g json
+
 ADD sh /scripts/
 
 WORKDIR /pbjs
