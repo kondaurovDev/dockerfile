@@ -1,5 +1,5 @@
 base_image=node:10.10.0-alpine
-image_name=kondaurov/npm:publisher
+image_name=kondaurov/publish:npm
 
 build:
 	docker build -t ${image_name} -f Dockerfile .
