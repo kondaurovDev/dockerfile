@@ -28,7 +28,7 @@ if your directory contains package.json then don't forget this thing: **Last lin
 
 Package any directry (as resource) in jar and publish to maven repository
 
-    docker pull kondaurov/sbt-alpine:publish-resource
+    docker pull kondaurov/publish:maven-resource
 	docker run --rm \
 	 --net=host \
 	 -v $(PWD):/project \
@@ -41,6 +41,6 @@ Package any directry (as resource) in jar and publish to maven repository
 	 -e org=my_org \
 	 -e version=0.0.2 \
 	 -e host=localhost \
-	 kondaurov/sbt-alpine:publish-resource
+	 docker pull kondaurov/publish:maven-resource
 
  *TODO - This image uses sbt for publishing. it's slow, might be good idea to try gradle for that*
