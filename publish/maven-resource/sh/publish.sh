@@ -28,6 +28,7 @@ credentials := Seq(Credentials("${realm}", "${host}", "${login}", "${password}")
 publishTo := Some("Maven repo" at "${repository}")
 publishArtifact in (Compile, packageDoc) := false
 publishArtifact in (Compile, packageSrc) := false
+autoScalaLibrary := false
 _EOF_
 
 echo "publishing..."

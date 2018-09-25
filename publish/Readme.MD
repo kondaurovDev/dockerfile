@@ -9,13 +9,13 @@ Publish your files to NPM repository
 	docker run --rm \
 	--net=host \
 	-v $(PWD):/project \
+	-e PACKAGE_DIR=/project/example_files \
     -e PACKAGE_NAME=my_name \
 	-e PACKAGE_SCOPE=my_scope \
 	-e PACKAGE_VERSION=1.0.0 \
 	-e REPO_LOGIN=admin \
 	-e REPO_PASSWORD=admin123 \
 	-e REPO_URL=http://localhost:8081/repository/npm-hosted/ \
-	-e PACKAGE_DIR=/project/example_files \
 	kondaurov/publish:npm
 
 Important:
@@ -23,8 +23,8 @@ if your directory contains package.json then don't forget this thing: **Last lin
 
 ### maven
 
-[![](https://images.microbadger.com/badges/image/kondaurov/publish:maven.svg)](https://microbadger.com/images/kondaurov/publish:maven "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/kondaurov/publish:maven.svg)](https://microbadger.com/images/kondaurov/publish:maven "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/kondaurov/publish:maven-resource.svg)](https://microbadger.com/images/kondaurov/publish:maven-resource "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/kondaurov/publish:maven-resource.svg)](https://microbadger.com/images/kondaurov/publish:maven-resource "Get your own version badge on microbadger.com")
 
 Package any directry (as resource) in jar and publish to maven repository
 
