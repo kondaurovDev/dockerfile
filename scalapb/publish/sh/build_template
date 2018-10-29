@@ -5,4 +5,4 @@ credentials := Seq(Credentials("${realm}", "${host}", "${login}", "${password}")
 publishTo := Some("Maven repo" at "${repository}")
 scalaSource in Compile := new File("${src_path}")
 libraryDependencies += "io.grpc" % "grpc-netty" % "1.15.0"
-libraryDependencies += "com.thesamet.scalapb" %% "scalapb-runtime-grpc" % "0.8.0-RC2"
+libraryDependencies += "com.thesamet.scalapb" %% "scalapb-runtime-grpc" % "0.8.2"

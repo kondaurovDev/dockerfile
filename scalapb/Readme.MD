@@ -12,6 +12,7 @@ It will generate Scala case classes, parsers and serializers for your protocol b
 	 -e PROTO_DIR=/project/example_proto \
 	 -e SCALA_OUT=/project/target \
 	 -e SCALA_OPTS=flat_package \
+	 -v 1000:1000 \
 	 kondaurov/scalapb:generator
 
 You need to bring your proto directory inside container (-v $(PWD):/project)
