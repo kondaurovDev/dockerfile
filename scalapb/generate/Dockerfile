@@ -25,4 +25,6 @@ RUN \
 
 WORKDIR /home/scalapb
 
+USER scalapb
+
 ENTRYPOINT ["/bin/sh", "/scripts/generate_scala.sh"]
