@@ -12,4 +12,4 @@ echo "out dir: ${SCALA_OUT}"
 
 files=`find ${PROTO_DIR} -name "*.proto" | paste -sd " " -`
 
-/bin/bash /root/scalapbc/bin/scalapbc -v351 -I=${PROTO_DIR} --scala_out=${SCALA_OPTS}:${SCALA_OUT} ${files}
+/bin/bash /home/scalapb/scalapbc/bin/scalapbc -v361 -I=${PROTO_DIR} --scala_out=${SCALA_OPTS}:${SCALA_OUT} ${files}
