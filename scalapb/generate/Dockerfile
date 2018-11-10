@@ -15,16 +15,19 @@ FROM kondaurov/jre-alpine:8
 
 MAINTAINER Kondaurov Alexander <kondaurov.dev@gmail.com>
 
+RUN \
+    addgroup -g 1000 bill && \
+    adduser -u 1000 -G bill -D bill
+
 COPY --from=binary --chown=1000:1000 /root/scalapbc /home/scalapb/scalapbc
 
-ADD sh /scripts
-
 RUN \
-    adduser -S scalapb && \
     /bin/bash /home/scalapb/scalapbc/bin/scalapbc -v361 || true
 
-WORKDIR /home/scalapb
+WORKDIR /home/bill
 
-USER scalapb
+USER bill
 
-ENTRYPOINT ["/bin/sh", "/scripts/generate_scala.sh"]
+ADD --chown=bill:bill sh scripts
+
+ENTRYPOINT ["/bin/sh", "/home/bill/scripts/generate_scala.sh"]
