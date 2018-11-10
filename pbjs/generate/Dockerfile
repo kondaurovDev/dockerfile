@@ -12,14 +12,12 @@ FROM node:10.10.0-alpine
 
 MAINTAINER Kondaurov Alexander <kondaurov.dev@gmail.com>
 
-RUN adduser -S pbjs
+USER node
 
-COPY --from=base /pbjs /home/pbjs
+WORKDIR /home/node
 
-ADD sh /scripts/
+COPY --from=base /pbjs /home/node
 
-WORKDIR /home/pbjs
-
-USER pbjs
+ADD --chown sh /scripts/
 
 ENTRYPOINT ["/bin/sh", "/scripts/generate.sh"]

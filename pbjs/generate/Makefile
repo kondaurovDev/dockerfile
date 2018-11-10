@@ -12,5 +12,4 @@ run:
 	-v $(PWD):/project \
 	-e PROTO_DIR=/project/example_proto \
 	-e TARGET_DIR=/project/target \
-	-u 1000:1000 \
 	${image_name}
