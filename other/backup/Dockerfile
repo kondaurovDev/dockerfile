@@ -8,14 +8,6 @@ RUN  \
     apk update && \
     apk add curl
 
-RUN \
-    addgroup -g 1000 bill && \
-    adduser -u 1000 -G bill -D bill
+ADD sh scripts
 
-USER bill
-
-WORKDIR /home/bill
-
-ADD --chown=bill:bill sh sh
-
-ENTRYPOINT ["/bin/sh", "sh/init.sh"]
+ENTRYPOINT ["/bin/sh", "scripts/init.sh"]
