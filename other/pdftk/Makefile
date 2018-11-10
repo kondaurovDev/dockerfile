@@ -9,6 +9,5 @@ ssh:
 run:
 	docker run --rm \
 		-v $(PWD):/files \
-		-u 1000:1000 \
 		${image_name} \
 		/files/example/three_page.pdf cat 2-3 output /files/target/outfile.pdf

@@ -9,11 +9,12 @@ RUN  \
     apk upgrade && \
     apk add pdftk
 
-RUN  \
-    adduser -S pdftk
+RUN \
+    addgroup -g 1000 bill && \
+    adduser -u 1000 -G bill -D bill
 
-USER pdftk
+USER bill
 
-WORKDIR /home/pdftk
+WORKDIR /home/bill
 
 ENTRYPOINT ["pdftk"]
