@@ -18,6 +18,6 @@ WORKDIR /home/node
 
 COPY --from=base /pbjs /home/node
 
-ADD --chown sh /scripts/
+ADD --chown=node:node sh /scripts/
 
 ENTRYPOINT ["/bin/sh", "/scripts/generate.sh"]
