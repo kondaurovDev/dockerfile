@@ -45,4 +45,3 @@ This one uploads tar to server
 		-e URL=http://localhost:8081/repository/raw-hosted-snapshots \
 		-e FILENAME=test \
 		kondaurov/other:backup
-
