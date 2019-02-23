@@ -1,4 +1,4 @@
-image=kondaurov/dev:node
+image=kondaurov/dev:node-9
 container=kondaurov-node-dev
 
 build:
