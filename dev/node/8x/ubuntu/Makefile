@@ -1,4 +1,4 @@
-image=kondaurov/dev:node-8
+image=kondaurov/dev:node8-ubuntu
 container=kondaurov-node-dev
 
 build:
