@@ -8,6 +8,9 @@ RUN \
     apt-get install -y nodejs && \
     rm nodesource_setup.sh
 
+RUN apt-get install -y git
+RUN apt-get install -y build-essential
+
 ARG userId=1000
 ARG userGroupId=1000
 
@@ -21,4 +24,4 @@ RUN echo "add user" && \
         --gecos "First Last,RoomNumber,WorkPhone,HomePhone" \
         dev
 
-USER dev
+ENTRYPOINT [ "/bin/bash" ]
